@@ -15,4 +15,11 @@ def add(request):
         todo = Todo.objects.create(title=title)
     return render(request, 'todo/partials/todo.html', {'todo': todo})
 
+@require_http_methods(['PUT'])
+def update(request, pk):
+    todo = Todo.objects.get(pk=pk)
+    todo.is_done = True
+    todo.save()
+    return render(request, 'todo/partials/todo.html', {'todo': todo})
+
 
