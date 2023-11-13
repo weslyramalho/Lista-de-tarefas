@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
+    <style>
+        .htmx-swapping {
+            opacity: 0;
+            transition: opacity 250ms ease-in-out;
+        }
+    </style>
 </head>
 <body class="bg-fuchsia-900"> 
     <nav class="flex items-center justify-betwenn px-4 py-6 text-center bg-gradient-to-r from-purple-500 to-fuchsia-900">
-        <a href="/" class="text-2xl text-white">Todo List</a>
+        <a href="/" class="text-2xl text-white">Lista de Tarefas</a>
     </nav>
     <div class="w-4/5 my-6 mx-auto p-2 lg:p-10 bg-white rounded-xl">
         <form 
