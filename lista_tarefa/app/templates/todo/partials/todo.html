@@ -2,13 +2,13 @@
     hx-put="/update/{{ todo.id }}/"
     hx-target="this"
     hx-swap="outerHTML">
-    <article class="flex{% if todo.is_done %} bg-green-500 rounded-xl{% endif %}">
+    <article class="flex{% if todo.is_done %} bg-red-500 rounded-xl{% endif %}">
         <div class="w-4/5 py-3">
             <p class="px-6 text-xs text-gray-900">{{ todo.title }}</p>
         </div>
         <div class="w-1/5 px-6 py-3 flex justify-end space-x-4">
             {% if not todo.is_done %}
-                <button class="text-fuchsia-600 hover: text-fuchsia-900">Feito</button>
+                <button class="text-fuchsia-600 hover: text-fuchsia-900">Prioridade</button>
             {% endif %}
             <a 
             href="#" 
